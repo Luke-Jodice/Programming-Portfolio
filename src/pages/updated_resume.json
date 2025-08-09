@@ -108,9 +108,25 @@
     },
     "experience": [
         {
+            "position": "Senior Tier 1 Technical Support Representative",
+            "company": "Quickbase",
+            "date": "July 2025 - Current",
+            "key_parts_of_job": [
+                "Troubleshooting",
+                "Documentation",
+                "Splunk"
+            ],
+            "job_responsibilities": [
+                "Deliver Core Tier 1 Support: Perform standard troubleshooting, issue resolution, and customer assistance in alignment with Tier 1 support protocols.",
+                "Facilitate Issue Resolution: Drive case progress through collaborative stand-up meetings and targeted one-on-one consultations where there is the opportunity to troubleshoot complex technical issues, define root causes, and establish clear next-step actions for resolution.",
+                "Mentor Junior Team Members: Provide formal mentorship and shadowing opportunities to onboard and develop new support representatives.",
+                "Manage Case Escalation: Proactively identify cases requiring advanced intervention and provide seamless support during escalation or handover processes."
+            ]
+        },
+        {
             "position": "Technical Support Representative",
             "company": "Quickbase",
-            "date": "December 2023 - Current",
+            "date": "December 2023 - July 2025",
            "key_parts_of_job": [
         "Troubleshooting",
         "Documentation",
