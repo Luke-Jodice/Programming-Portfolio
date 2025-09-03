@@ -26,7 +26,7 @@ export default function ProjectsMain() {
   
   useEffect(() => {
     fetch(
-      "https://api.github.com/users/ljodiceendicott/repos?sort=updated&per_page=20"
+      "https://api.github.com/users/luke-jodice/repos?sort=updated&per_page=20"
     )
       .then((response) => {
         if (!response.ok) {
