@@ -1,128 +1,164 @@
 [
-    {
-      "title": "Programmer’s New Year Resolution [1]",
-      "subtitle": "Making progress? Feels like I may be",
-      "link": "https://medium.com/@jodiceluke/programmers-new-year-resolution-1-4eef61d106c4",
-      "published_date": "March 04, 2025"
-    },
-    {
-      "title": "Programmer’s New Year Resolution [0]",
-      "subtitle": "The endless loop of learning and applying your knowledge",
-      "link": "https://medium.com/@jodiceluke/programmers-new-year-resolution-0-144c1393a22d",
-      "published_date": "February 02, 2025"
-    },
-    {
-      "title": "One year reflection in the workforce",
-      "subtitle": "My takeaways from my career as of yet",
-      "link": "https://medium.com/@jodiceluke/one-year-reflection-in-the-workforce-0bf604868d59",
-      "published_date": "December 12, 2024"
-    },
-    {
-      "title": "Modern Software Development is easy?",
-      "subtitle": "Where the new hurdle in development is found thanks to AI and modern infrastructure",
-      "link": "https://medium.com/@jodiceluke/modern-software-development-is-easy-1694d692fc5a",
-      "published_date": "November 12, 2024"
-    },
-    {
-      "title": "Reflection of a year without school pt.2 final final",
-      "subtitle": "How the journey post grad has driven me to work as I do",
-      "link": "https://medium.com/@jodiceluke/reflection-of-a-year-without-school-pt-2-final-final-85c3795afc69",
-      "published_date": "October 15, 2024"
-    },
-    {
-      "title": "Reflection of a Year Without School part 1",
-      "subtitle": "The realization that all of my years of schooling prepared me for the real world",
-      "link": "https://medium.com/@jodiceluke/reflection-of-a-year-without-school-cc47b248a83e",
-      "published_date": "June 11, 2024"
-    },
-    {
-      "title": "Creativity to (.exe)cution",
-      "subtitle": "How the strong projects struggle to make it out of the notebook",
-      "link": "https://medium.com/@jodiceluke/creativity-to-exe-cution-788fd75e551b",
-      "published_date": "April 05, 2024"
-    },
-    {
-      "title": "The Super Power of Online:  Online Interactions Prepare for remote work",
-      "subtitle": "Talking about striving for “queue zero” and the impact of online gaming on remote work",
-      "link": "https://medium.com/@jodiceluke/the-super-power-of-online-online-interactions-prepare-for-remote-work-fa4bb55ce8a0",
-      "published_date": "March 30, 2024"
-    },
-    {
-      "title": "Navigating Ambitions: Balancing Career Goals and Personal Well-Being",
-      "subtitle": "The progression of my career goals and as I work on establishing a good work life balance while working remote.",
-      "link": "https://medium.com/@jodiceluke/navigating-ambitions-balancing-career-goals-and-personal-well-being-663833457f24",
-      "published_date": "March 13, 2024"
-    },
-    {
-      "title": "Increasing My Work Experience using a New Career",
-      "subtitle": "A new notch on my belt as I take on a new role in tech support",
-      "link": "https://medium.com/@jodiceluke/increasing-my-work-experience-using-a-new-career-1e36e1d06894",
-      "published_date": "March 06, 2024"
-    },
-    {
-      "title": "Gratitude and the Retail Rush",
-      "subtitle": "Thankfulness Amidst the Holiday Hustle",
-      "link": "https://medium.com/@jodiceluke/gratitude-and-the-retail-rush-756c5115144f",
-      "published_date": "November 19, 2023"
-    },
-    {
-      "title": "Navigating Furthering My Tech Dreams and Development Challenges",
-      "subtitle": "Balancing Career Aspirations and Project Strides in the Tech Landscape",
-      "link": "https://medium.com/@jodiceluke/navigating-furthering-my-tech-dreams-and-development-challenges-9aaff0f1bd26",
-      "published_date": "November 11, 2023"
-    },
-    {
-      "title": "Navigating Early Adulthood: Balancing Sobriety, Friendship, and Passion Projects",
-      "subtitle": "An Insightful Journey into the Struggles, Solutions, and Future Aspirations of a Young Adult Breaking into Tech",
-      "link": "https://medium.com/@jodiceluke/navigating-early-adulthood-balancing-sobriety-friendship-and-passion-projects-25d70a394d49",
-      "published_date": "November 03, 2023"
-    },
-    {
-      "title": "Streamlining Life: A Smart Morning Routine and Professional Workflow Transformation",
-      "subtitle": "Developing a new Project and Workflow while reflecting on what it takes to develop a strong work-ethic",
-      "link": "https://medium.com/@jodiceluke/streamlining-life-a-smart-morning-routine-and-professional-workflow-transformation-c9dc33735ad0",
-      "published_date": "October 27, 2023"
-    },
-    {
-      "title": "Embracing Life’s Challenges: A Journey Through the Lens of a Rogue-like Game",
-      "subtitle": "Navigating Life’s Challenges and Career Pursuits with a positive outlook on what is to come",
-      "link": "https://medium.com/@jodiceluke/embracing-lifes-challenges-a-journey-through-the-lens-of-a-rogue-like-game-8a55415389af",
-      "published_date": "October 20, 2023"
-    },
-    {
-      "title": "Reconnecting and Reflecting: The Impactful People and Projects in My Life Currently",
-      "subtitle": "Reaching out to my friends and starting the development of a new project",
-      "link": "https://medium.com/@jodiceluke/reconnecting-and-reflecting-the-impactful-people-and-projects-in-my-life-currently-b7b223742242",
-      "published_date": "October 13, 2023"
-    },
-    {
-      "title": "The Subtle Art of Maintaining and the Continuous Building and Debugging of My Personal Site",
-      "subtitle": "Maintaining is important; Finding struggles when improving helping build up the importance of continuing to pursue even when it becomes…",
-      "link": "https://medium.com/@jodiceluke/the-subtle-art-of-maintaining-and-the-continuous-building-and-debugging-of-my-personal-site-7182c96dcb92",
-      "published_date": "October 07, 2023"
-    },
-    {
-      "title": "The rising of new Gen-GPT and Socializing as an Adult",
-      "subtitle": "Next Gen of chat GPT is revolutionizing the game, Got new updates on my projects and the importance in socializing post-grad",
-      "link": "https://medium.com/@jodiceluke/the-rising-of-new-gen-gpt-and-socializing-as-an-adult-690ceade05d9",
-      "published_date": "September 30, 2023"
-    },
-    {
-      "title": "Finding my Template Niche",
-      "subtitle": "Figuring out my format with dreams of AWS, the new IPhone and more",
-      "link": "https://medium.com/@jodiceluke/finding-my-template-niche-922f348234a7",
-      "published_date": "September 23, 2023"
-    },
-    {
-      "title": "The impact of Bun & My Family",
-      "subtitle": "Bun and the future of JS",
-      "link": "https://medium.com/@jodiceluke/the-impact-of-bun-my-family-93fcfd4cabc3",
-      "published_date": "September 18, 2023"
-    },
-    {
-      "title": "Return to the Normal Chaos",
-      "subtitle": "WITH SUMMER COMING TO AN END, THERE IS A SENSE THAT LIVES ARE GOING BACK TO THEIR NORMAL CHAOS.",
-      "link": "https://medium.com/@jodiceluke/return-to-the-normal-chaos-462606915ec4",
-      "published_date": "September 04, 2023"
-    }
-  ]
+  {
+    "title": "Programmer's New Year Resolution [7]",
+    "subtitle": "Doors opening, as we begin to move into the final part of the quarter",
+    "link": "https://medium.com/@jodiceluke/programmers-new-year-resolution-7-a5524ce7da3c?source=rss-40bcb1bbdc51------2",
+    "published_date": "September 02, 2025"
+  },
+  {
+    "title": "Programmer's New Year Resolution [6]",
+    "subtitle": "Another Month in the Books with innovation",
+    "link": "https://medium.com/@jodiceluke/programmers-new-year-resolution-6-508c4e31b9ff?source=rss-40bcb1bbdc51------2",
+    "published_date": "August 13, 2025"
+  },
+  {
+    "title": "Programmer's New Year Resolution [5]",
+    "subtitle": "The Summer Month of fireworks in and out of the office",
+    "link": "https://medium.com/@jodiceluke/programmers-new-year-resolution-6-c4795a660e4e?source=rss-40bcb1bbdc51------2",
+    "published_date": "July 05, 2025"
+  },
+  {
+    "title": "Programmer's New Year Resolution [4]",
+    "subtitle": "Projects and more projects",
+    "link": "https://medium.com/@jodiceluke/programmers-new-year-resolution-5-57baad027e2a?source=rss-40bcb1bbdc51------2",
+    "published_date": "June 05, 2025"
+  },
+  {
+    "title": "Programmer's New Year Resolution [3]",
+    "subtitle": "AI surprising me each and every day",
+    "link": "https://medium.com/@jodiceluke/programmers-new-year-resolution-4-93fba2027f94?source=rss-40bcb1bbdc51------2",
+    "published_date": "April 30, 2025"
+  },
+  {
+    "title": "Programmer's New Year Resolution [2]",
+    "subtitle": "The momentum has changed as more focus comes on work",
+    "link": "https://medium.com/@jodiceluke/programmers-new-year-resolution-2-10fe01b8f1a0?source=rss-40bcb1bbdc51------2",
+    "published_date": "April 02, 2025"
+  },
+  {
+    "title": "Programmer’s New Year Resolution [1]",
+    "subtitle": "Making progress? Feels like I may be",
+    "link": "https://medium.com/@jodiceluke/programmers-new-year-resolution-1-4eef61d106c4",
+    "published_date": "March 04, 2025"
+  },
+  {
+    "title": "Programmer’s New Year Resolution [0]",
+    "subtitle": "The endless loop of learning and applying your knowledge",
+    "link": "https://medium.com/@jodiceluke/programmers-new-year-resolution-0-144c1393a22d",
+    "published_date": "February 02, 2025"
+  },
+  {
+    "title": "One year reflection in the workforce",
+    "subtitle": "My takeaways from my career as of yet",
+    "link": "https://medium.com/@jodiceluke/one-year-reflection-in-the-workforce-0bf604868d59",
+    "published_date": "December 12, 2024"
+  },
+  {
+    "title": "Modern Software Development is easy?",
+    "subtitle": "Where the new hurdle in development is found thanks to AI and modern infrastructure",
+    "link": "https://medium.com/@jodiceluke/modern-software-development-is-easy-1694d692fc5a",
+    "published_date": "November 12, 2024"
+  },
+  {
+    "title": "Reflection of a year without school pt.2 final final",
+    "subtitle": "How the journey post grad has driven me to work as I do",
+    "link": "https://medium.com/@jodiceluke/reflection-of-a-year-without-school-pt-2-final-final-85c3795afc69",
+    "published_date": "October 15, 2024"
+  },
+  {
+    "title": "Reflection of a Year Without School part 1",
+    "subtitle": "The realization that all of my years of schooling prepared me for the real world",
+    "link": "https://medium.com/@jodiceluke/reflection-of-a-year-without-school-cc47b248a83e",
+    "published_date": "June 11, 2024"
+  },
+  {
+    "title": "Creativity to (.exe)cution",
+    "subtitle": "How the strong projects struggle to make it out of the notebook",
+    "link": "https://medium.com/@jodiceluke/creativity-to-exe-cution-788fd75e551b",
+    "published_date": "April 05, 2024"
+  },
+  {
+    "title": "The Super Power of Online:  Online Interactions Prepare for remote work",
+    "subtitle": "Talking about striving for “queue zero” and the impact of online gaming on remote work",
+    "link": "https://medium.com/@jodiceluke/the-super-power-of-online-online-interactions-prepare-for-remote-work-fa4bb55ce8a0",
+    "published_date": "March 30, 2024"
+  },
+  {
+    "title": "Navigating Ambitions: Balancing Career Goals and Personal Well-Being",
+    "subtitle": "The progression of my career goals and as I work on establishing a good work life balance while working remote.",
+    "link": "https://medium.com/@jodiceluke/navigating-ambitions-balancing-career-goals-and-personal-well-being-663833457f24",
+    "published_date": "March 13, 2024"
+  },
+  {
+    "title": "Increasing My Work Experience using a New Career",
+    "subtitle": "A new notch on my belt as I take on a new role in tech support",
+    "link": "https://medium.com/@jodiceluke/increasing-my-work-experience-using-a-new-career-1e36e1d06894",
+    "published_date": "March 06, 2024"
+  },
+  {
+    "title": "Gratitude and the Retail Rush",
+    "subtitle": "Thankfulness Amidst the Holiday Hustle",
+    "link": "https://medium.com/@jodiceluke/gratitude-and-the-retail-rush-756c5115144f",
+    "published_date": "November 19, 2023"
+  },
+  {
+    "title": "Navigating Furthering My Tech Dreams and Development Challenges",
+    "subtitle": "Balancing Career Aspirations and Project Strides in the Tech Landscape",
+    "link": "https://medium.com/@jodiceluke/navigating-furthering-my-tech-dreams-and-development-challenges-9aaff0f1bd26",
+    "published_date": "November 11, 2023"
+  },
+  {
+    "title": "Navigating Early Adulthood: Balancing Sobriety, Friendship, and Passion Projects",
+    "subtitle": "An Insightful Journey into the Struggles, Solutions, and Future Aspirations of a Young Adult Breaking into Tech",
+    "link": "https://medium.com/@jodiceluke/navigating-early-adulthood-balancing-sobriety-friendship-and-passion-projects-25d70a394d49",
+    "published_date": "November 03, 2023"
+  },
+  {
+    "title": "Streamlining Life: A Smart Morning Routine and Professional Workflow Transformation",
+    "subtitle": "Developing a new Project and Workflow while reflecting on what it takes to develop a strong work-ethic",
+    "link": "https://medium.com/@jodiceluke/streamlining-life-a-smart-morning-routine-and-professional-workflow-transformation-c9dc33735ad0",
+    "published_date": "October 27, 2023"
+  },
+  {
+    "title": "Embracing Life’s Challenges: A Journey Through the Lens of a Rogue-like Game",
+    "subtitle": "Navigating Life’s Challenges and Career Pursuits with a positive outlook on what is to come",
+    "link": "https://medium.com/@jodiceluke/embracing-lifes-challenges-a-journey-through-the-lens-of-a-rogue-like-game-8a55415389af",
+    "published_date": "October 20, 2023"
+  },
+  {
+    "title": "Reconnecting and Reflecting: The Impactful People and Projects in My Life Currently",
+    "subtitle": "Reaching out to my friends and starting the development of a new project",
+    "link": "https://medium.com/@jodiceluke/reconnecting-and-reflecting-the-impactful-people-and-projects-in-my-life-currently-b7b223742242",
+    "published_date": "October 13, 2023"
+  },
+  {
+    "title": "The Subtle Art of Maintaining and the Continuous Building and Debugging of My Personal Site",
+    "subtitle": "Maintaining is important; Finding struggles when improving helping build up the importance of continuing to pursue even when it becomes…",
+    "link": "https://medium.com/@jodiceluke/the-subtle-art-of-maintaining-and-the-continuous-building-and-debugging-of-my-personal-site-7182c96dcb92",
+    "published_date": "October 07, 2023"
+  },
+  {
+    "title": "The rising of new Gen-GPT and Socializing as an Adult",
+    "subtitle": "Next Gen of chat GPT is revolutionizing the game, Got new updates on my projects and the importance in socializing post-grad",
+    "link": "https://medium.com/@jodiceluke/the-rising-of-new-gen-gpt-and-socializing-as-an-adult-690ceade05d9",
+    "published_date": "September 30, 2023"
+  },
+  {
+    "title": "Finding my Template Niche",
+    "subtitle": "Figuring out my format with dreams of AWS, the new IPhone and more",
+    "link": "https://medium.com/@jodiceluke/finding-my-template-niche-922f348234a7",
+    "published_date": "September 23, 2023"
+  },
+  {
+    "title": "The impact of Bun & My Family",
+    "subtitle": "Bun and the future of JS",
+    "link": "https://medium.com/@jodiceluke/the-impact-of-bun-my-family-93fcfd4cabc3",
+    "published_date": "September 18, 2023"
+  },
+  {
+    "title": "Return to the Normal Chaos",
+    "subtitle": "WITH SUMMER COMING TO AN END, THERE IS A SENSE THAT LIVES ARE GOING BACK TO THEIR NORMAL CHAOS.",
+    "link": "https://medium.com/@jodiceluke/return-to-the-normal-chaos-462606915ec4",
+    "published_date": "September 04, 2023"
+  }
+]
