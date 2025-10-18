@@ -6,13 +6,13 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#4717f6',
+          DEFAULT: '#4f7942',
           dark: '#3612c7',
           light: '#6b43f8'
         },
         surface: {
           DEFAULT: '#f8f9fa',
-          dark: '#e9ecef'
+          dark: '#101518'
         }
       },
       fontFamily: {
