@@ -8,17 +8,16 @@ export default function experience() {
       {/* Will Soon systematically read in these values from Resume */}
       
       <PreviewCard
-        title="Trivily"
-        description="Chronological Historical Event Puzzle Game. Allows for historical knowledge to be checked daily and be able to share your score with your friends"
-        repoLink="https://github.com/ljodiceendicott/Trivily"
-        liveLink="https://trivily.vercel.app/" //Adding link to web hosted on vercel
-        technologies={["Typescript | Next.js | Postgres"]}
+        title="MBTA SDK"
+        description="A middleware implementation the MBTA API to assist with writing applications interacting with Data around the MBTA T system"
+        repoLink="https://github.com/Luke-Jodice/MBTA-SDK"
+        technologies={["Javascript | API Endpoints | Integration Tool"]}
       />
       <PreviewCard
-        title="Gitfast"
-        description="A tool that was created to help push code for small projects easier and quicker and with build in UI that can help the process of commiting code without having to go to the terminal"
-        repoLink="https://github.com/ljodiceendicott/GitFast"
-        technologies={["Python | Bash"]}
+        title="My IDP"
+        description="A personal implementation of a real world IDP to be used to stand up my own IDP for testing of setting up SSO Enviorments and the use of SCIM APIs"
+        repoLink="https://github.com/Luke-Jodice/My-idp"
+        technologies={["Javascript | Identity Provider Tool | SSO/SCIM "]}
       />
      
     </div>
