@@ -108,9 +108,27 @@
     },
     "experience": [
         {
+            "position": "Associate Escalations Engineer",
+            "company": "Quickbase",
+            "date": "November 2025 - Current",
+            "key_parts_of_job": [
+                "Troubleshooting",
+                "Mentorship",
+                "Splunk & Big Query"
+
+            ],
+            "job_responsibilities": [
+                "Investigated and resolved complex customer issues escalated from Premium Support, with a focus on advanced platform troubleshooting and root cause analysis within the Quickbase environment.",
+                "Supported enterprise customers implementing SAML-based Single Sign-On (SSO) by troubleshooting authentication workflows and integrating Quickbase with customer identity providers.",
+                "Mentored and provided technical guidance to junior support engineers through case reviews, shadowing, and knowledge sharing to improve troubleshooting skills and support quality.",
+                "Managed escalation workflows by identifying high-impact cases, coordinating resolution strategies, and ensuring timely communication between customers, support teams, and engineering.",
+                "Collaborated with Product and Engineering teams to reproduce defects, provide detailed technical feedback, and contribute customer insights that informed product improvements and feature development."
+              ]
+        },
+        {
             "position": "Senior Tier 1 Technical Support Representative",
             "company": "Quickbase",
-            "date": "July 2025 - Current",
+            "date": "July 2025 - November 2025",
             "key_parts_of_job": [
                 "Troubleshooting",
                 "Documentation",
