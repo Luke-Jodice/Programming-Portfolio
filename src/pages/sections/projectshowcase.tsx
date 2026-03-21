@@ -14,10 +14,11 @@ export default function experience() {
         technologies={["Javascript | API Endpoints | Integration Tool"]}
       />
       <PreviewCard
-        title="My IDP"
-        description="A personal implementation of a real world IDP to be used to stand up my own IDP for testing of setting up SSO Enviorments and the use of SCIM APIs"
-        repoLink="https://github.com/Luke-Jodice/My-idp"
-        technologies={["Javascript | Identity Provider Tool | SSO/SCIM "]}
+        title="SoundRoute"
+        description="a cross-platform app that blends trip planning with music curation. Plan your route, and AI recommends songs matched to terrain, speed, time of day, and your taste. Full manual control. Spotify & YouTube Music integration. Real-time playback sync. "
+        repoLink="https://github.com/Luke-Jodice/vibedrive"
+        liveLink="https://vibedrive-topaz.vercel.app/ "
+        technologies={["Javascript | Spotify API "]}
       />
      
     </div>
