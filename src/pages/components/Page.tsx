@@ -7,7 +7,7 @@ interface PageProps {
   children: React.ReactNode;
 }
 
-const Page: React.FC<PageProps> = ({ className, children}) => {
+const Page: React.FC<PageProps> = ({children}) => {
   return (
 <div className="background-coloring">
 <Header/>

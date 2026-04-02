@@ -12,16 +12,10 @@ interface ItemCardProps {
 }
 
 const ItemCard: React.FC<ItemCardProps> = ({
-  className,
   children,
   title,
   company,
   description,
-  postiveTakaway,
-  learningops,
-  repoLink,
-  liveLink,
-  pageLink,
 }) => {
   return (
     <>

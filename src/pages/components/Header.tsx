@@ -11,7 +11,7 @@ interface HeaderProps {
   className?: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ className }) => {
+const Header: React.FC<HeaderProps> = () => {
   return (
     <div className="main-background flex w-screen items-center justify-between text-white">
       <div className="pl-6">
