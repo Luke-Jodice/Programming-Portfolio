@@ -1,8 +1,12 @@
 @import 'tailwindcss';
 
+/* Your content paths, formerly in tailwind.config.ts */
+@source "../src/**/*.{js,ts,jsx,tsx}";
+
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/aspect-ratio';
+
 
 @theme {
   --color-primary: #4f7942;
