@@ -11,8 +11,8 @@ export interface ArticleData {
 }
 
 export const getArticles = unstable_cache(
-  async (): Promise<ArticleData[]> => {
-    return articlelist as ArticleData[];
+  () => {
+    return Promise.resolve(articlelist as ArticleData[]);
   },
   ["articles-data"],
   { revalidate: 3600, tags: ["articles"] }
