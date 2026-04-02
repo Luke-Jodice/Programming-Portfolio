@@ -24,10 +24,10 @@ export default function ProjectsMain() {
 
   return (
     <Page>
-      <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 px-4 py-12 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-linear-to-b from-white via-gray-50 to-gray-100 px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <header className="text-center">
-            <h1 className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-3xl font-bold text-transparent sm:text-4xl">
+            <h1 className="bg-linear-to-r from-primary to-primary-dark bg-clip-text text-3xl font-bold text-transparent sm:text-4xl">
               My Projects
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">

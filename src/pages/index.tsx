@@ -8,7 +8,7 @@ import Page from "./components/Page";
 export default function Home() {
   return (
     <Page>
-      <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 px-4 py-8 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-linear-to-b from-white via-gray-50 to-gray-100 px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="mt-14 text-black text-4xl font-bold sm:text-5xl">
             Hello
