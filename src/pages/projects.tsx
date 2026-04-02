@@ -1,62 +1,25 @@
 import { useEffect, useState } from "react";
 import Page from "~/pages/components/Page";
 import ProgramCards from "~/pages/components/ProgramCard";
-
-interface ProgramCardData {
-  className?: string;
-  children?: React.ReactNode;
-  title: string;
-  description: string;
-  repoLink: string;
-  liveLink?: string;
-  pageLink?: string;
-  technology?: string;
-  screenshotpath?: string;
-  lastUpdated?: string;
-  id?: string;
-}
-interface GithubRepo {
-  name: string;
-  description: string | null;
-  html_url: string;
-  language: string | null;
-  pushed_at: string;
-}
-
-// var repos: ProgramCarddata[] = []
+import { type ProgramCardData } from "~/lib/types";
+import { getGithubRepos } from "~/server/actions/projects";
 
 export default function ProjectsMain() {
   const [repos, setData] = useState<ProgramCardData[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(
-      "https://api.github.com/users/luke-jodice/repos?sort=updated&per_page=20"
-    )
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json() as Promise<GithubRepo[]>;
-      })
-      .then((data) => {
-        const mappedRepos : ProgramCardData[] = data
-          .map((repo) => ({
-            title: repo.name,
-            description: repo.description ?? "",
-            repoLink: repo.html_url,
-            technology: repo.language ?? undefined,
-            lastUpdated: repo.pushed_at,
-          }))
-          .sort(
-            (a,b) =>
-              new Date(b.lastUpdated ?? 0).getTime() -
-              new Date(a.lastUpdated ?? 0).getTime()
-          );
-        setData(mappedRepos);
+    async function loadRepos() {
+      try {
+        const data = await getGithubRepos();
+        setData(data);
+      } catch (err) {
+        console.error("Failed to load repos:", err);
+      } finally {
         setLoading(false);
-      })
-      .catch((err) => console.log(err));
+      }
+    }
+    void loadRepos();
   }, []);
 
   return (

@@ -1,10 +1,14 @@
+import { useEffect, useState } from "react";
 import Page from "~/pages/components/Page";
 import EmploymentCard from "./components/Employment-Card";
-
-import Resume from "./updated_resume.json";
+import { getExperience, type JobExperience } from "~/server/actions/experience";
 
 export default function Experience() {
-  const jobs = Resume.experience;
+  const [jobs, setJobs] = useState<JobExperience[]>([]);
+
+  useEffect(() => {
+    void getExperience().then(setJobs);
+  }, []);
 
   return (
     <Page>

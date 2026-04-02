@@ -1,9 +1,15 @@
+import { useEffect, useState } from "react";
 import Page from "~/pages/components/Page";
-
-import articlelist from "./mediumart.json";
 import Article from "./components/article";
+import { getArticles, type ArticleData } from "~/server/actions/articles";
 
 export default function Articles() {
+  const [articles, setArticles] = useState<ArticleData[]>([]);
+
+  useEffect(() => {
+    void getArticles().then(setArticles);
+  }, []);
+
   return (
     <Page>
       <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100">
@@ -29,7 +35,7 @@ export default function Articles() {
 
         <main className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {articlelist.map((art, index) => (
+            {articles.map((art, index) => (
               <Article
                 key={index}
                 article_url={art.link}
