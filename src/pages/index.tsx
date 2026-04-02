@@ -1,14 +1,11 @@
 import Link from "next/link";
 import CurrentJob from "~/pages/sections/currentjob";
 import ProjectShowcase from "~/pages/sections/projectshowcase";
-import resume from "~/pages/updated_resume.json";
 import Page from "./components/Page";
 // Add the images from screenshots
 
 
 export default function Home() {
-  
-  const cv = resume;
   return (
     <Page>
       <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 px-4 py-8 sm:px-6 lg:px-8">

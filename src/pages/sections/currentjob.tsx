@@ -14,7 +14,7 @@ interface ResumeData {
 }
 
 const job = jobData as ResumeData;
-const recentJob = job.experience[0] as JobExperience;
+const recentJob = job.experience[0]!;
 
 export default function CurrentJob() {
     return (

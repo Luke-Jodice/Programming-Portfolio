@@ -12,20 +12,16 @@ interface PreviewCardProps {
   postiveTakaway?: string;
   learningops?: string;
   pageLink?: string;
-  technologies: Array<string>;
+  technologies: string[];
 }
 
 const ItemCard: React.FC<PreviewCardProps> = ({
-  className,
   children,
   title,
   company,
   description,
-  postiveTakaway,
-  learningops,
   technologies,
   repoLink,
-  repoLink2,
   Frontendlink,
   backendlink,
   liveLink,

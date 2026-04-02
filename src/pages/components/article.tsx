@@ -8,8 +8,6 @@ interface articleprops {
 }
 
 const article: React.FC<articleprops> = ({
-  className,
-  children,
   article_url,
   title,
   subtitle,

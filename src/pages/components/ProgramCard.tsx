@@ -15,9 +15,7 @@ const ItemCard: React.FC<ProgramCard> = ({
   title,
   description,
   repoLink,
-  liveLink,
   technology,
-  className,
   children
 }) => {
   return (
