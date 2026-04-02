@@ -5,24 +5,14 @@
 await import("./src/env.mjs");
 
 /** @type {import("next").NextConfig} */
-const config = {
-  reactStrictMode: true,
-
-  /**
-   * If you are using `appDir` then you must comment the below `i18n` config out.
-   *
-   * @see https://github.com/vercel/next.js/issues/41980
-   */
-  typescript:{
-    ignoreBuildErrors: true,
-  },
-  eslint:{
-    ignoreDuringBuilds: true,
-  },
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
-  },
-};
+  const config = {
+    reactStrictMode: true,
+    compress: true,
+    images: {
+      formats: ['image/avif', 'image/webp'],
+      deviceSizes: [640, 1080, 1920],
+    },
+    typedRoutes: true,
+  };
 
 export default config;

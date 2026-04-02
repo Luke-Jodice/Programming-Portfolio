@@ -5,8 +5,6 @@ interface EmploymentCardProps {
   company: string;
   description: string[];
   keyparts: string[];
-  start?: string;
-  end?: string;
   timeframe?: string;
 }
 
@@ -16,8 +14,6 @@ const EmploymentCard: React.FC<EmploymentCardProps> = ({
   description,
   keyparts,
   timeframe,
-  start,
-  end,
 }) => {
   const keyparts_format = (keyparts || []).map((part, i) => (
     i === keyparts.length - 1 ? part : part + " • "

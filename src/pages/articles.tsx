@@ -21,7 +21,7 @@ export default function Articles() {
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-600">
               These are all articles that I have written and published that talk about my development professionally and
-              as a way to document my thoughts and opinions as I have gone out into the "real world" during my time 
+              as a way to document my thoughts and opinions as I have gone out into the Real World during my time 
               following graduating from Endicott College in 2023.
             </p>
           </div>
