@@ -1,6 +1,5 @@
 "use server";
 
-import { unstable_cache } from "next/cache";
 import articlelist from "~/pages/mediumart.json";
 
 export interface ArticleData {
@@ -10,10 +9,6 @@ export interface ArticleData {
   published_date: string;
 }
 
-export const getArticles = unstable_cache(
-  () => {
+export const getArticles = async () => {
     return Promise.resolve(articlelist as ArticleData[]);
-  },
-  ["articles-data"],
-  { revalidate: 3600, tags: ["articles"] }
-);
+};

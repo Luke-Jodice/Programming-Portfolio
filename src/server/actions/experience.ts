@@ -1,6 +1,5 @@
 "use server";
 
-import { unstable_cache } from "next/cache";
 import resumeData from "~/pages/updated_resume.json";
 
 export interface JobExperience {
@@ -11,12 +10,8 @@ export interface JobExperience {
   job_responsibilities: string[];
 }
 
-export const getExperience = unstable_cache(
-  () => {
+export const getExperience = async () => {
     // Currently reading from JSON, but structured to easily swap for Prisma:
     // return db.experience.findMany({ orderBy: { order: 'asc' } });
     return Promise.resolve((resumeData as { experience: JobExperience[] }).experience);
-  },
-  ["experience-data"],
-  { revalidate: 3600, tags: ["experience"] }
-);
+};

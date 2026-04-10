@@ -1,10 +1,8 @@
 "use server";
 
-import { unstable_cache } from "next/cache";
 import { type GithubRepo, type ProgramCardData } from "~/lib/types";
 
-export const getGithubRepos = unstable_cache(
-  async (): Promise<ProgramCardData[]> => {
+export const getGithubRepos = async (): Promise<ProgramCardData[]> => {
     try {
       const response = await fetch(
         "https://api.github.com/users/luke-jodice/repos?sort=updated&per_page=20",
@@ -12,8 +10,8 @@ export const getGithubRepos = unstable_cache(
           headers: {
             "Accept": "application/vnd.github.v3+json",
             "User-Agent": "Luke-Jodice-Portfolio"
-          },
-          next: { revalidate: 3600 } // Revalidate every hour
+          }
+          // Note: fetch options like { next: { revalidate: 3600 } } are ignored in Pages Router
         }
       );
 
@@ -40,7 +38,4 @@ export const getGithubRepos = unstable_cache(
       console.error("Error fetching Github repos:", error);
       return [];
     }
-  },
-  ["github-repos"],
-  { revalidate: 3600, tags: ["projects"] }
-);
+};
