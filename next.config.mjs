@@ -5,14 +5,15 @@
 await import("./src/env.mjs");
 
 /** @type {import("next").NextConfig} */
-  const config = {
-    reactStrictMode: true,
-    compress: true,
-    images: {
-      formats: ['image/avif', 'image/webp'],
-      deviceSizes: [640, 1080, 1920],
-    },
-    typedRoutes: true,
-  };
+const config = {
+  reactStrictMode: true,
+  compress: true,
+  poweredByHeader: false,
+  images: {
+    formats: ["image/avif", "image/webp"],
+    deviceSizes: [640, 1080, 1920],
+  },
+  typedRoutes: true,
+};
 
 export default config;
