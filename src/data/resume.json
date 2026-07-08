@@ -119,9 +119,8 @@
             ],
             "job_responsibilities": [
                 "Developed customer-facing enablement content — including demo scripts and tutorial videos — to support onboarding and product education for Pave.",
-                "Built internal tooling and automated deployment workflows (e.g., GitHub Actions-based CI/CD for custom Quickbase code page UIs) to improve engineering efficiency.",
-                "Investigated third-party integration behavior (Okta SCIM provisioning) to troubleshoot and improve user lifecycle management within Quickbase.",
                 "Created visual documentation and diagrams to communicate product architecture and data hierarchy to both internal teams and customers.",
+                "Defect Triage with development team - allowing for reduced issue resolution time",
                 "Contributed to product marketing and thought leadership through conference content (Empower 2026) and LinkedIn posts highlighting product capabilities."
             ]
         },
