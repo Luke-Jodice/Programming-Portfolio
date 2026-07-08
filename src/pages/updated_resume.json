@@ -108,9 +108,27 @@
     },
     "experience": [
         {
+            "position": "Customer Experience Engineer",
+            "company": "Pave (Quickbase)",
+            "date": "March 2026 - Present",
+            "key_parts_of_job": [
+                "Customer Enablement",
+                "CI/CD Automation",
+                "Okta SCIM",
+                "Technical Documentation"
+            ],
+            "job_responsibilities": [
+                "Developed customer-facing enablement content — including demo scripts and tutorial videos — to support onboarding and product education for Pave.",
+                "Built internal tooling and automated deployment workflows (e.g., GitHub Actions-based CI/CD for custom Quickbase code page UIs) to improve engineering efficiency.",
+                "Investigated third-party integration behavior (Okta SCIM provisioning) to troubleshoot and improve user lifecycle management within Quickbase.",
+                "Created visual documentation and diagrams to communicate product architecture and data hierarchy to both internal teams and customers.",
+                "Contributed to product marketing and thought leadership through conference content (Empower 2026) and LinkedIn posts highlighting product capabilities."
+            ]
+        },
+        {
             "position": "Associate Escalations Engineer",
             "company": "Quickbase",
-            "date": "November 2025 - Current",
+            "date": "November 2025 - March 2026",
             "key_parts_of_job": [
                 "Troubleshooting",
                 "Mentorship",
