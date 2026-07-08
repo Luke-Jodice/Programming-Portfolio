@@ -1,22 +1,20 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
-/* Your content paths, formerly in tailwind.config.ts */
-@source "../src/**/*.{js,ts,jsx,tsx}";
+@source "../**/*.{js,ts,jsx,tsx}";
 
-@plugin '@tailwindcss/typography';
-@plugin '@tailwindcss/forms';
-@plugin '@tailwindcss/aspect-ratio';
-
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/aspect-ratio";
 
 @theme {
   --color-primary: #4f7942;
-  --color-primary-dark: #3612c7;
+  --color-primary-dark: #3d3d3d;
   --color-primary-light: #6b43f8;
 
-  --color-surface: #f8f9fa;
+  --color-surface: #f5f5f5;
   --color-surface-dark: #101518;
 
-  --font-sans: Inter var, Inter, system-ui, -apple-system, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
 
   --animate-gradient-x: gradient-x 15s ease infinite;
   --animate-gradient-y: gradient-y 15s ease infinite;
@@ -57,14 +55,6 @@
   }
 }
 
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
 @layer base {
   *,
   ::after,
@@ -73,63 +63,40 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
   }
-}
 
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 25%;
+  :root {
+    --color-background: #ffffff;
+    --color-text: #1f2937;
+    --color-text-light: #6b7280;
+
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md:
+      0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg:
+      0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
   }
 
-  100% {
-    background-position: 100% 75%;
+  html {
+    overflow-x: hidden;
   }
-}
 
-:root {
-  /* Modern color palette */
-  --color-primary: #5A5A5A;        /* Neutral gray for primary actions */
-  --color-primary-dark: #3D3D3D;    /* Darker gray for hover/focus states */
-  --color-background: #FFFFFF;      /* Pure white (kept for accessibility) */
-  --color-surface: #F5F5F5;         /* Light gray for surfaces/cards */
-  --color-text: #333333;           /* Near-black for high-contrast text */
-  --color-text-light: #777777;      /* Medium gray for secondary text */
-  --color-accent: #6C6C6C;          /* Subtle accent gray (or use #808080 for more visibility) */
-  
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  
-  /* Spacing */
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
-  
-  /* Border Radius */
-  --radius-sm: 0.375rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 1rem;
-
-  overflow-x: hidden;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(360deg, hsla(240, 35%, 91%, 1) 0%, hsla(0, 0%, 100%, 1) 9%, hsla(0, 0%, 100%, 1) 73%, hsla(0, 0%, 88%, 1) 100%);
-
-  background: -moz-linear-gradient(360deg, hsla(240, 35%, 91%, 1) 0%, hsla(0, 0%, 100%, 1) 9%, hsla(0, 0%, 100%, 1) 73%, hsla(0, 0%, 88%, 1) 100%);
-
-  background: -webkit-linear-gradient(360deg, hsla(240, 35%, 91%, 1) 0%, hsla(0, 0%, 100%, 1) 9%, hsla(0, 0%, 100%, 1) 73%, hsla(0, 0%, 88%, 1) 100%);
-
-  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#E0E0F0", endColorstr="#ffffff", GradientType=1);
-}
-
-/* Base styles */
-body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background-color: var(--color-background);
-  color: var(--color-text);
-  line-height: 1.5;
-  overflow-x: hidden;
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
 }
 
 .background-coloring {
@@ -139,15 +106,13 @@ body {
     var(--color-surface) 100%
   );
   position: relative;
+  min-height: 100vh;
 }
 
 .background-coloring::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-image: radial-gradient(
     circle at 1px 1px,
     rgba(0, 0, 0, 0.05) 1px,
@@ -158,76 +123,9 @@ body {
   pointer-events: none;
 }
 
-.button-menu {
-  background-color: var(--color-text-light);
-  color: white;
-  padding: var(--spacing-sm) var(--spacing-md);
-  transition: all 0.2s ease-in-out;
-  font-size: small;
-}
-.button-menu:hover {
-  background-color: var(--color-primary-dark);
-  /* transform: translateY(-1px); */
-}
-.starting{
-  border-radius: 1em 0 0 1em;
-}
-.ending{
-  border-radius: 0 1em 1em 0;
-}
-
 .main-background {
-  background-color: var(--color-surface);
-  color: var(--color-text);
+  background-color: var(--color-surface-dark, #101518);
+  color: white;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
-  padding: var(--spacing-lg);
-}
-
-/* Modern Grid Layout */
-.row {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: var(--spacing-lg);
-  padding: var(--spacing-md);
-}
-
-/* GitHub Icon */
-.icons8-github {
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  transition: transform 0.2s ease;
-}
-
-.icons8-github:hover {
-  transform: scale(1.1);
-}
-
-#gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--spacing-lg);
-  padding: var(--spacing-lg);
-}
-
-.program-project3 {
-  padding-top: var(--spacing-xl);
-}
-
-.col{
-  float: left;
-  padding: 10px;
-}
-
-lef{
-  width: 75%;
-}
-rig{
-  width: 25%
-}
-.row:after{
-  content: "";
-  display: table;
-  clear: both;
 }
