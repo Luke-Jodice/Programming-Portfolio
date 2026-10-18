@@ -1,71 +1,74 @@
+import Tag from "./Tag";
+
 interface EmploymentCardProps {
   title: string;
   company: string;
   description: string[];
   keyparts: string[];
   timeframe?: string;
+  tone?: "light" | "dark";
+  /** Cap the number of bullet points shown (e.g. on the home page). */
+  maxBullets?: number;
 }
 
+/** One row of the experience timeline. Render inside an <ol>. */
 export default function EmploymentCard({
   title,
   company,
   description,
   keyparts,
   timeframe,
+  tone = "light",
+  maxBullets,
 }: EmploymentCardProps) {
-  return (
-    <article className="rounded-xl bg-white p-6 shadow-sm transition-all hover:shadow-md">
-      <div className="space-y-4">
-        <header className="border-b border-gray-100 pb-4">
-          <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
-          <div className="mt-2 flex flex-wrap items-center gap-2 text-gray-600">
-            <span className="font-medium">{company}</span>
-            {timeframe ? (
-              <>
-                <span aria-hidden className="text-gray-300">
-                  •
-                </span>
-                <span className="text-sm text-gray-500">{timeframe}</span>
-              </>
-            ) : null}
-          </div>
-        </header>
+  const dark = tone === "dark";
+  const bullets = maxBullets ? description.slice(0, maxBullets) : description;
 
+  return (
+    <li
+      className={`flex flex-wrap gap-x-8 gap-y-2 border-t py-8 last:border-b ${
+        dark ? "border-night-line" : "border-line"
+      }`}
+    >
+      {timeframe ? (
+        <p
+          className={`basis-44 pt-1.5 font-mono text-[13px] uppercase ${
+            dark ? "text-night-muted" : "text-muted"
+          }`}
+        >
+          {timeframe}
+        </p>
+      ) : null}
+      <div className="flex min-w-0 flex-[1_1_320px] flex-col gap-4">
+        <div>
+          <h3 className="text-2xl font-bold tracking-[-0.02em]">{title}</h3>
+          <p
+            className={`mt-1 text-base ${dark ? "text-accent-soft" : "text-accent"}`}
+          >
+            {company}
+          </p>
+        </div>
         {keyparts.length > 0 ? (
-          <ul className="flex flex-wrap gap-2 rounded-lg bg-gray-50 px-4 py-3 text-sm text-gray-600">
+          <ul className="flex flex-wrap gap-2">
             {keyparts.map((part) => (
-              <li
-                key={part}
-                className="rounded-full bg-white px-3 py-1 shadow-sm"
-              >
-                {part}
+              <li key={part}>
+                <Tag tone={dark ? "dark" : "outline"}>{part}</Tag>
               </li>
             ))}
           </ul>
         ) : null}
-
-        <ul className="space-y-3 text-gray-600">
-          {description.map((item) => (
-            <li key={item} className="flex items-start">
-              <svg
-                aria-hidden
-                className="mr-2 mt-1.5 h-4 w-4 flex-shrink-0 text-primary"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-              <span className="leading-relaxed">{item}</span>
-            </li>
-          ))}
-        </ul>
+        {bullets.length > 0 ? (
+          <ul
+            className={`flex list-disc flex-col gap-2 pl-5 text-base leading-relaxed ${
+              dark ? "text-night-body" : "text-body"
+            }`}
+          >
+            {bullets.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        ) : null}
       </div>
-    </article>
+    </li>
   );
 }

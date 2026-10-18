@@ -6,53 +6,38 @@
 @plugin "@tailwindcss/forms";
 @plugin "@tailwindcss/aspect-ratio";
 
+/*
+ * Blueprint theme
+ * ground  – page background (graph paper)
+ * ink     – headings / primary text
+ * body    – paragraph text
+ * muted   – meta text, labels
+ * line    – borders, dividers
+ * accent  – the single brand color (links, highlights, sketch)
+ */
 @theme {
-  --color-primary: #4f7942;
-  --color-primary-dark: #3d3d3d;
-  --color-primary-light: #6b43f8;
+  --color-ground: #f1f2ee;
+  --color-surface: #ffffff;
+  --color-ink: #15171a;
+  --color-body: #3e4247;
+  --color-muted: #565b60;
+  --color-line: #d9dbd5;
+  --color-accent: #2e46e6;
+  --color-accent-soft: #a9b4ff;
 
-  --color-surface: #f5f5f5;
-  --color-surface-dark: #101518;
+  /* Kept for components that still reference "primary" */
+  --color-primary: #2e46e6;
+  --color-primary-dark: #15171a;
 
-  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --color-night: #15171a;
+  --color-night-line: #3a3e44;
+  --color-night-body: #d4d7db;
+  --color-night-muted: #b9bdc2;
 
-  --animate-gradient-x: gradient-x 15s ease infinite;
-  --animate-gradient-y: gradient-y 15s ease infinite;
-  --animate-gradient-xy: gradient-xy 15s ease infinite;
-
-  @keyframes gradient-y {
-    0%,
-    100% {
-      background-size: 400% 400%;
-      background-position: center top;
-    }
-    50% {
-      background-size: 200% 200%;
-      background-position: center center;
-    }
-  }
-  @keyframes gradient-x {
-    0%,
-    100% {
-      background-size: 200% 200%;
-      background-position: left center;
-    }
-    50% {
-      background-size: 200% 200%;
-      background-position: right center;
-    }
-  }
-  @keyframes gradient-xy {
-    0%,
-    100% {
-      background-size: 400% 400%;
-      background-position: left center;
-    }
-    50% {
-      background-size: 200% 200%;
-      background-position: right center;
-    }
-  }
+  --font-sans:
+    "Schibsted Grotesk Variable", system-ui, -apple-system, sans-serif;
+  --font-mono:
+    "JetBrains Mono Variable", ui-monospace, "SFMono-Regular", monospace;
 }
 
 @layer base {
@@ -61,71 +46,134 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
-
-  :root {
-    --color-background: #ffffff;
-    --color-text: #1f2937;
-    --color-text-light: #6b7280;
-
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-md:
-      0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg:
-      0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-
-    --spacing-xs: 0.25rem;
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 1.5rem;
-    --spacing-xl: 2rem;
-
-    --radius-sm: 0.375rem;
-    --radius-md: 0.5rem;
-    --radius-lg: 1rem;
+    border-color: var(--color-line, currentcolor);
   }
 
   html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
 
   body {
     font-family: var(--font-sans);
-    background-color: var(--color-background);
-    color: var(--color-text);
+    color: var(--color-ink);
     line-height: 1.5;
     overflow-x: hidden;
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
 }
 
-.background-coloring {
-  background: linear-gradient(
-    135deg,
-    var(--color-background) 0%,
-    var(--color-surface) 100%
-  );
-  position: relative;
-  min-height: 100vh;
+/* Graph-paper background: 120px major grid over a 24px minor grid */
+.blueprint {
+  background-color: var(--color-ground);
+  background-image:
+    linear-gradient(#dadcd5 1px, transparent 1px),
+    linear-gradient(90deg, #dadcd5 1px, transparent 1px),
+    linear-gradient(#e6e8e2 1px, transparent 1px),
+    linear-gradient(90deg, #e6e8e2 1px, transparent 1px);
+  background-size:
+    120px 120px,
+    120px 120px,
+    24px 24px,
+    24px 24px;
+  background-position: -1px -1px;
 }
 
-.background-coloring::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(
-    circle at 1px 1px,
-    rgba(0, 0, 0, 0.05) 1px,
-    transparent 1px
-  );
-  background-size: 24px 24px;
-  opacity: 0.5;
-  pointer-events: none;
+/* Same grid, for dark sections */
+.blueprint-night {
+  background-color: var(--color-night);
+  background-image:
+    linear-gradient(#202328 1px, transparent 1px),
+    linear-gradient(90deg, #202328 1px, transparent 1px);
+  background-size: 120px 120px;
 }
 
-.main-background {
-  background-color: var(--color-surface-dark, #101518);
-  color: white;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+/* ---------- Hero sketch: line-art that draws itself on ---------- */
+@keyframes lw-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes lw-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes lw-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(110px, 70px);
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes lw-click {
+  50% {
+    transform: scale(0.78);
+  }
+}
+@keyframes lw-ripple {
+  0% {
+    opacity: 0.8;
+    transform: scale(0.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+/* A stroke that draws on. Element needs pathLength="1". */
+.lw-draw {
+  stroke-dasharray: 1 1;
+  stroke-dashoffset: 1;
+  animation: lw-draw 0.9s cubic-bezier(0.6, 0, 0.2, 1) forwards;
+}
+.lw-fade {
+  opacity: 0;
+  animation: lw-fade 0.45s ease forwards;
+}
+.lw-cursor {
+  opacity: 0;
+  animation: lw-cursor 1s cubic-bezier(0.3, 0, 0.2, 1) 2.4s forwards;
+}
+.lw-click {
+  transform-box: fill-box;
+  transform-origin: 0 0;
+  animation: lw-click 0.28s ease 3.45s;
+}
+.lw-ripple {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: lw-ripple 0.9s ease-out 3.5s forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lw-draw,
+  .lw-fade,
+  .lw-cursor,
+  .lw-click {
+    animation: none;
+    stroke-dashoffset: 0;
+    opacity: 1;
+    transform: none;
+  }
+  .lw-ripple {
+    animation: none;
+    opacity: 0;
+  }
 }

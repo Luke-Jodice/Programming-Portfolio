@@ -7,6 +7,7 @@ const showcase = [
       "A middleware implementation of the MBTA API to assist with writing applications interacting with data around the MBTA T system.",
     repoLink: "https://github.com/Luke-Jodice/MBTA-SDK",
     technologies: ["JavaScript", "API", "Integration"],
+    art: "transit",
   },
   {
     title: "SoundRoute",
@@ -15,12 +16,13 @@ const showcase = [
     repoLink: "https://github.com/Luke-Jodice/vibedrive",
     liveLink: "https://vibedrive-topaz.vercel.app/",
     technologies: ["JavaScript", "Spotify API"],
+    art: "route",
   },
 ] as const;
 
 export default function ProjectShowcase() {
   return (
-    <div className="grid gap-6 sm:grid-cols-2">
+    <div className="grid gap-6 md:grid-cols-2">
       {showcase.map((project) => (
         <PreviewCard key={project.title} {...project} />
       ))}
