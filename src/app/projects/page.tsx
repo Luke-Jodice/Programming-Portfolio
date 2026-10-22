@@ -48,7 +48,6 @@ export default async function ProjectsPage() {
                 description={repo.description}
                 repoLink={repo.repoLink}
                 technology={repo.technology}
-                lastUpdated={repo.lastUpdated}
               />
             ))}
           </div>
