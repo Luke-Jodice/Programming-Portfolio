@@ -8,7 +8,7 @@ const REVALIDATE_SECONDS = 60 * 60;
 export async function getGithubRepos(): Promise<ProgramCardData[]> {
   try {
     const response = await fetch(
-      `https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=20`,
+      `https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=100`,
       {
         headers: {
           Accept: "application/vnd.github.v3+json",
