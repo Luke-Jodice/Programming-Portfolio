@@ -4,7 +4,7 @@ export default function Loading() {
       <div
         role="status"
         aria-live="polite"
-        className="flex items-center gap-3 rounded-lg bg-white px-6 py-4 text-gray-600 shadow-sm"
+        className="flex items-center gap-3 rounded-2xl border border-line bg-surface px-6 py-4 text-body"
       >
         <svg
           aria-hidden

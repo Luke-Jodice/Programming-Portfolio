@@ -3,6 +3,9 @@ import type { Metadata, Viewport } from "next";
 import Footer from "~/components/Footer";
 import Header from "~/components/Header";
 
+import "@fontsource-variable/jetbrains-mono";
+import "@fontsource-variable/schibsted-grotesk";
+
 import "~/styles/globals.css";
 
 const SITE_URL = "https://lukejodice.com";
@@ -35,7 +38,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#4f7942",
+  themeColor: "#f1f2ee",
   width: "device-width",
   initialScale: 1,
 };
@@ -47,9 +50,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="background-coloring antialiased">
+      <body className="blueprint min-h-screen antialiased">
         <Header />
-        <main>{children}</main>
+        <main className="relative z-10">{children}</main>
         <Footer />
       </body>
     </html>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import EmploymentCard from "~/components/EmploymentCard";
+import SectionHeading from "~/components/SectionHeading";
 import { getExperience } from "~/server/data/experience";
 
 export const metadata: Metadata = {
@@ -13,30 +14,27 @@ export default function ExperiencePage() {
   const jobs = getExperience();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 px-4 py-12 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-4xl">
-        <header className="mb-12 text-center">
-          <h1 className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-4xl font-bold text-transparent sm:text-5xl">
-            Professional Experience
-          </h1>
-          <p className="mt-4 text-lg text-gray-600">
-            My journey and professional growth through various roles.
-          </p>
-        </header>
+    <div className="mx-auto flex max-w-[1200px] flex-col gap-10 px-4 py-20 sm:px-8">
+      <header className="flex flex-col gap-5">
+        <SectionHeading index="02" title="Experience" as="h1" />
+        <p className="max-w-2xl text-lg leading-relaxed text-body">
+          My path so far, from support to escalations to customer experience
+          engineering, and what I built at each step.
+        </p>
+      </header>
 
-        <div className="space-y-8">
-          {jobs.map((job) => (
-            <EmploymentCard
-              key={`${job.company}-${job.date}`}
-              title={job.position}
-              company={job.company}
-              description={job.job_responsibilities}
-              keyparts={job.key_parts_of_job}
-              timeframe={job.date}
-            />
-          ))}
-        </div>
-      </div>
+      <ol className="flex flex-col rounded-2xl border border-line bg-surface px-6 sm:px-8 [&>li:first-child]:border-t-0 [&>li:last-child]:border-b-0">
+        {jobs.map((job) => (
+          <EmploymentCard
+            key={`${job.company}-${job.date}`}
+            title={job.position}
+            company={job.company}
+            description={job.job_responsibilities}
+            keyparts={job.key_parts_of_job}
+            timeframe={job.date}
+          />
+        ))}
+      </ol>
     </div>
   );
 }

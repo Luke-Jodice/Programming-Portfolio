@@ -7,7 +7,7 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
   { href: "/experience", label: "Experience" },
-  { href: "/articles", label: "Articles" },
+  { href: "/articles", label: "Writing" },
 ] as const;
 
 export default function Navbar() {
@@ -23,10 +23,10 @@ export default function Navbar() {
             key={href}
             href={href}
             aria-current={isActive ? "page" : undefined}
-            className={`rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
+            className={`inline-flex min-h-11 items-center px-3 text-[15px] font-medium transition-colors ${
               isActive
-                ? "bg-white text-gray-900"
-                : "text-white/90 hover:bg-white/15 hover:text-white"
+                ? "text-accent underline decoration-2 underline-offset-8"
+                : "text-ink hover:text-accent"
             }`}
           >
             {label}

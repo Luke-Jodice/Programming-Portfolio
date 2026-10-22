@@ -5,6 +5,7 @@ interface ArticleCardProps {
   datePub: string;
 }
 
+/** One article as a list row. Render inside a <ul>. */
 export default function ArticleCard({
   articleUrl,
   title,
@@ -12,43 +13,34 @@ export default function ArticleCard({
   datePub,
 }: ArticleCardProps) {
   return (
-    <article className="group relative overflow-hidden rounded-xl bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+    <li className="border-t border-line last:border-b">
       <a
         href={articleUrl}
-        className="block"
         target="_blank"
         rel="noopener noreferrer"
+        className="group flex flex-wrap items-baseline gap-x-8 gap-y-2 py-6"
       >
-        <div className="space-y-4">
-          <h3 className="text-2xl font-semibold tracking-tight text-gray-900 transition-colors duration-200 group-hover:text-primary">
+        <time
+          dateTime={datePub}
+          className="basis-40 font-mono text-[13px] text-muted uppercase"
+        >
+          {datePub}
+        </time>
+        <span className="flex min-w-0 flex-[999_1_420px] flex-col gap-1.5">
+          <span className="text-[22px] font-bold tracking-[-0.015em] transition-colors group-hover:text-accent">
             {title}
-          </h3>
+          </span>
           {subtitle ? (
-            <p className="text-base leading-relaxed text-gray-600 group-hover:text-gray-500">
-              {subtitle}
-            </p>
+            <span className="text-base text-body">{subtitle}</span>
           ) : null}
-          <div className="flex items-center gap-2 text-sm text-gray-500">
-            <svg
-              aria-hidden
-              className="h-5 w-5 text-gray-400"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1.5}
-                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-              />
-            </svg>
-            <time dateTime={datePub} className="font-medium">
-              {datePub}
-            </time>
-          </div>
-        </div>
+        </span>
+        <span
+          aria-hidden
+          className="font-mono text-sm text-muted transition-transform group-hover:translate-x-1 group-hover:text-accent"
+        >
+          ↗
+        </span>
       </a>
-    </article>
+    </li>
   );
 }
