@@ -1,6 +1,6 @@
 /** Line-art thumbnails for featured projects. */
 
-export type ProjectArtKind = "transit" | "route";
+export type ProjectArtKind = "transit" | "route" | "timeline";
 
 function Transit() {
   // A subway-map style line with stations, one highlighted
@@ -129,6 +129,80 @@ function Route() {
   );
 }
 
+const WAVEFORM = [6, 12, 8, 16, 10, 4, 14, 18, 8, 12, 6, 10, 16, 8, 4, 12, 18,
+  10, 6, 14, 8, 12, 16, 6, 10, 14, 8, 4, 12, 10, 16, 6, 8, 12];
+
+function Timeline() {
+  // An editor viewer above a cut video track and audio waveform, with playhead
+  return (
+    <div className="flex h-60 items-center justify-center bg-[#e6e8e2]">
+      <svg
+        aria-hidden
+        width="320"
+        height="170"
+        viewBox="0 0 320 170"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="text-accent"
+      >
+        <rect
+          x="110"
+          y="10"
+          width="100"
+          height="56"
+          rx="6"
+          fill="#fff"
+          stroke="#D0D3CC"
+        />
+        <path d="M152 28l16 10-16 10z" fill="currentColor" />
+        {[
+          [20, 90],
+          [126, 70],
+          [208, 92],
+        ].map(([x, w]) => (
+          <rect
+            key={`c${x}`}
+            x={x}
+            y="82"
+            width={w}
+            height="22"
+            rx="5"
+            fill="#fff"
+            stroke="currentColor"
+            strokeWidth="3"
+          />
+        ))}
+        <path
+          d="M118 78v30"
+          stroke="#9BA0A5"
+          strokeWidth="2"
+          strokeDasharray="2 5"
+        />
+        <g stroke="#9BA0A5" strokeWidth="3">
+          {WAVEFORM.map((h, i) => {
+            const x = 24 + i * 8;
+            // Leave a gap where the clip was cut
+            if (x > 108 && x < 128) return null;
+            return <path key={x} d={`M${x} ${134 - h / 2}v${h}`} />;
+          })}
+        </g>
+        <path d="M168 72v86" stroke="#15171A" strokeWidth="3" />
+        <circle
+          cx="168"
+          cy="72"
+          r="7"
+          fill="#fff"
+          stroke="#15171A"
+          strokeWidth="3"
+        />
+      </svg>
+    </div>
+  );
+}
+
 export default function ProjectArt({ kind }: { kind: ProjectArtKind }) {
-  return kind === "transit" ? <Transit /> : <Route />;
+  if (kind === "transit") return <Transit />;
+  if (kind === "timeline") return <Timeline />;
+  return <Route />;
 }

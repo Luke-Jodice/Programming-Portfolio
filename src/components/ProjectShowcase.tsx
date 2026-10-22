@@ -10,13 +10,12 @@ const showcase = [
     art: "transit",
   },
   {
-    title: "SoundRoute",
+    title: "Cutrec",
     description:
-      "A cross-platform app that blends trip planning with music curation. Plan your route, and AI recommends songs matched to terrain, speed, time of day, and your taste. Full manual control with Spotify and YouTube Music integration plus real-time playback sync.",
-    repoLink: "https://github.com/Luke-Jodice/vibedrive",
-    liveLink: "https://vibedrive-topaz.vercel.app/",
-    technologies: ["JavaScript", "Spotify API"],
-    art: "route",
+      "A desktop video editor for turning screen and webcam recordings into edited and short-form video. Features transcript-driven cutting, silence and filler-word removal, AI edit suggestions, caption burn-in, and vertical (9:16) reframing.",
+    repoLink: "https://github.com/Luke-Jodice/cutroom",
+    technologies: ["TypeScript", "Electron", "React", "ffmpeg"],
+    art: "timeline",
   },
 ] as const;
 
